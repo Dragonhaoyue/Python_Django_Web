@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>黄鱼和带鱼的价钱</title>
+</head>
+<body>
+  <h1>三酷猫</h1>
+  <p>黄鱼的数量是10条，单价80元/条</p>
+  <p id="p1">总价是多少？</p>
+  <p>带鱼的数量是100条，单价是20元/条</p>
+  <p id="p2">总价是多少？</p>
+  <script>
+    function count(number, price){
+      return number*price
+    }
+    document.getElementById('p1').innerHTML = '总价: ' + count(10, 80);
+    document.getElementById('p2').innerHTML = '总价: ' + count(100, 20);
+  </script>
+</body>
+</html>

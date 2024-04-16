@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>鼠标单击触发onclick事件</title>
+</head>
+<body>
+  姓名：<input type="text" id="x1">
+  <br>
+  年龄：<input type="text" id="a1">
+  <br>
+  <button onclick="CheckValue(event)">提交数据</button>
+  <script>
+    function CheckValue(event){
+      if (document.getElementById('x1').value=='')
+        {
+          alert("姓名不能为空");
+        }
+      if (document.getElementById('a1').value<0)
+        {
+          alert("年龄不能小于0岁！");
+        }
+    }
+  </script>
+</body>
+</html>

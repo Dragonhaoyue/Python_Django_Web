@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>海螃蟹和海龙虾的总价</title>
+</head>
+<body>
+  <h1>三酷猫</h1>
+  <p>海螃蟹的数量是10只，单价是50元/只</p>
+  <p id="p1">总价是多少？</p>
+  <p>海龙虾的数量是10只，单价是100元/只</p>
+  <p id="p2">总价是多少？</p>
+  <script>
+    function ShowFish(sName, iNumber, fPrice){
+      this.name = sName;
+      this.iNumber = iNumber;
+      this.fPrice = fPrice;
+      this.count = function(){
+        return this.iNumber*this.fPrice;
+      }
+    }
+    var one = new ShowFish('海螃蟹', 10, 50);
+    var two = new ShowFish('海龙虾', 10, 100);
+    document.getElementById('p1').innerHTML = '总价: ' + one.count() + '元';
+    document.getElementById('p2').innerHTML = '总价: ' + two.count() + '元';
+  </script>
+</body>
+</html>
